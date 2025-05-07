@@ -1,0 +1,7 @@
+<!-- Este archivo es simplemente un archivo vacio que se coloca dentro de una carpeta vacia para que Git pueda rastrearla -->
+
+<!-- Este archivo es de utilidad para definir una estructura de carpetas al inicio de un proyecto y poderlo compartir con el equipo de trabajo, o en algunos casos como Symfony con Ruby on Rails, necesita carpetas para caché y logs, que solo tiene sentido tener una copia local  -->
+
+<!-- Se debe tomar en cuenta que es una convención NO oficial de Git -->
+
+Carpeta_vacia/

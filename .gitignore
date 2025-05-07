@@ -1,0 +1,6 @@
+# Este archivo indica que archivos y/o directorios Git debe ignorar en el historial de trabajo
+
+# Usualmente se ignora archivos que contienen información sensible, tambien archivos o carpetas que contienen información 
+# que solo tiene sentido tener en local; como la caché o logs
+
+.env
