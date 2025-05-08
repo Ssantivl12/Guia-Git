@@ -93,3 +93,32 @@ Luego de descargar, ejecuta el archivo y comenzamos con la instalación </br>
   <img src="assets/images/introduccion/17-int.jpg" alt="Captura" width="40%"/>
 </div>
 </details>
+
+
+## Primeros comandos
+
+Ya instalado correctamente Git comenzaremos con la explicación de una serie de comandos principales
+
+- `git init` : Primer comando que se debe realizar al iniciar un proyecto, inicializa Git crea un repositorio local
+- Configura tu identidad, antes de hacer tus primero commits debes indicarle Git quien eres, esto para que pueda registrar correctamente tus cambios en el historial
+    + `git config --global user.name "Tu Nombre"`
+    + `git config --global user.email "tuemail@example.com"`
+    El uso de `--global` indica que esa configuración a todos los proyectos de tu computadora
+
+- `git add ` Añade archivos al [staging area](#staging-area). Se puede usar `git add .` para añadir todos los archivos con cambios o `git add archivo.txt` para añadirlos uno por uno
+- `git commit` [Guarda los cambios agregados al staging area](#guardado-de-cambios-commits),este te solicitará un mensaje para nombrar los cambios a guardar, tambien se puede usar `git commit -m "mensaje"` para ingresar el mensaje en un solo comando 
+- `git status` Muestra el estado de los archivos, si fueron o no agregados al staging area
+- `git log` Muestra el historial de los commits ya realizados, incluye la fecha, mensaje y el autor de cada uno
+<div align="center">
+  <img src="assets/images/comandos-conceptos-basicos/git-log.jpg" alt="Captura" width="40%"/>
+</div>
+</details>
+
+## Conceptos básicos 
+
+### Staging area
+Es una *zona intermedia* en la que estan los archivos que estan listos para ser guardados. Es una lista de cambios que le diras a Git que quieres conservar, solo los archivos en el staging area se incluiran en el siguiente commit
+
+### Guardado de cambios (Commits)
+Un commit es como una foto del estado actual de tu proyecto. Cada commit guarda los cambios realizados, permitiendo volver a estados anteriores si algo sale mal y conforman el historial de desarrollo 
+
