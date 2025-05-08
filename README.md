@@ -16,7 +16,7 @@ El uso de las ramas ayuda a mantener el proyecto ordenado y limpio, protegiendo 
 - `git switch -c nueva_rama` : Agregandolé `-c` indicas que crearás una nueva rama y que te cambie a esa rama a la vez
 - `git chechout nombre_rama ` : Este comando se usaba, y aún se puede utilizar, para cambiar de rama. Pero este tambien tiene otras funcionalidades como; cambiar a un commit específico o crear una copia temporal, restaurar archivos a un estado anterior. Pero por su complejidad y multiples usos, Git creó `git switch` para que el cambio de ramas fuera más fácil de entender y evitar errores
 - `git checkout -b nueva_rama` : Este comando crea una nueva rama y te cambia a esa rama a la vez
-- `git merge rama_a_unir` : Sirve para fusionar los cambios de una rama con otra 
+- `git merge rama_a_unir` : Sirve para fusionar los cambios de una rama con otra (Se verá mas sobre el merge en el siguiente tema)
 
 Ya se vio anteriormente que el comando `git log` mostraba el historial de los commits realizados, pero agregandole mas parámetros podrémos ver un resumen del historial inclusive con ver como se conectan las ramas: </br>
 
