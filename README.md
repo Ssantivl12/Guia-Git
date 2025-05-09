@@ -33,3 +33,47 @@ Tras resolver el conflicto Git creará un nuevo commit para registrar como se re
 </div>
 
 > `git mergetool`, esta es una herramienta opcional que contiene una interfaz gráfica para resolver los conflictos **(debe ser instalada previamente)** 
+
+# Rebase vs Merge
+
+## ¿Qué es `git rebase`?
+
+Es un comando que también sirve para integrar cambios, pero en vez de crear un commit de fusión, **reescribe el historial** para que la rama parezca que siempre partio desde la última versión </br>
+
+Para dar un ejemplo se usarán 3 ramas *main* *dev* *funcionalidad*, donde la rama *dev* se creó desde la rama *main* y y funcionalidad desde la rama *dev*, donde la rama *funcionalidad* hara un rebase a *dev* </br>
+
+Primero se muestra las ramas en un estado de trabajo
+
+<div align=center> 
+  <img src="assets/images/conflictos/pre-rebase.jpg" alt="Captura" width="50%"/> 
+</div>
+
+Y así se ve como se reescribe el historial para parecer que los cambios de *funcionalidad* siempre realizaron desde *dev*, y la rama *funcionalidad* tambien apuntará al ultimo commit del rebase
+
+<div align=center> 
+  <img src="assets/images/conflictos/rebase.jpg" alt="Captura" width="50%"/> 
+</div>
+
+Si algún commit genera un conflicto, Git pausa el rebase pedirá que lo resuelvas cantes de continuar. El proceso sería: </br>
+
+- Git aplica los commits uno por uno
+- Si hay conflicto en un commit, debe resolverse manualmente, luego de resolverlo debe ejecutarse los siguientes comandos
+  
+  + `git add archivo_en_conflicto`
+  + `git rebase --continue`
+
+- Luego continua el proceso de rebase, aplicando uno por uno
+
+
+## Diferencias entre `git merge` y `git rebase`
+
+<div align=center> 
+
+| Característica       | Merge                     | Rebase                     |
+|----------------------|---------------------------|----------------------------|
+| Historial            | Mantiene ramificaciones   | Historial lineal, más limpio |
+| Conflictos           | Una vez al hacer merge    | Posibles conflictos por commit |
+| Fácil de entender    | Sí                        | Puede ser confuso al principio |
+| Recomendado para el trabajo en...  | En equipo                 | Personal o limpieza del historial |
+
+</div>
