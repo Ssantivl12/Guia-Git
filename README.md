@@ -29,7 +29,7 @@ Luego de indicar el conflicto ocurido, para resolverlo Git dará a escoger que c
 Tras resolver el conflicto Git creará un nuevo commit para registrar como se resolvió el conflicto, pero este commit no se crea automáticamente, se crea luego de la resolución que se realizó
 
 <div align=center> 
-  <img src="assets/images/conflictos/commit-resolutorio.jpg" alt="Captura" width="75%"/> 
+  <img src="assets/images/conflictos/commit-resolutorio.jpg" alt="Captura" width="50%"/> 
 </div>
 
 > `git mergetool`, esta es una herramienta opcional que contiene una interfaz gráfica para resolver los conflictos **(debe ser instalada previamente)** 
